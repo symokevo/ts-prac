@@ -113,3 +113,12 @@ console.log(numbers)
 console.log(typeof json); // This will log "number" since JSON.parse returns a number for the string "27"
 
 // String enums
+enum WordCardinalDirection {
+   North = "North",
+   East = "East",
+   South = "South",
+   West = "West"
+};
+// logs "North"
+console.log(WordCardinalDirection.North);
+
