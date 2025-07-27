@@ -169,3 +169,14 @@ const coloredRectangle: ColoredRectangle = {
    width: 15,
    color: "Purple"
 };
+
+// Union Types: used when a value can be more than one type (string or number)
+// Union | (OR)
+// You need to know your type when using union types, as TypeScript will not know which type to use.
+
+function printStatusCode(code: string | number) {
+   console.log(`My status code is ${code}`);
+}
+printStatusCode(200);
+printStatusCode("200");
+
