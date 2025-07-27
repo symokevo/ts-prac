@@ -122,3 +122,50 @@ enum WordCardinalDirection {
 // logs "North"
 console.log(WordCardinalDirection.North);
 
+// Type Aliases and Interfaces
+// TypeScript allows types to be defined separately from the variables that use them.
+// Aliases and Interfaces allows types to be easily shared between different variables/objects.
+
+// type aliases: allow defining types with a custom name
+type CarYear = number;
+type carType = string; 
+type CarModel = string;
+type Car = {
+   year: CarYear;
+   type: carType;
+   model: CarModel;
+}
+
+const carYear: CarYear = 2026;
+const carType: carType = "Lamborghini Urus";
+const carModel: CarModel = "Urus";
+const car2: Car = {
+   year: carYear,
+   type: carType,
+   model: carModel
+}
+
+// Interfaces: similar to type aliases, but only apply to object types
+interface Rectangle {
+   height: number;
+   width: number;
+};
+
+const rectangle: Rectangle = {
+   height: 20,
+   width: 10
+};
+const rectangelArea = rectangle.height * rectangle.width;
+console.log("Rectangle area is: " + rectangelArea);
+
+// EXTENDING INTERFACES: Extending an interface means you are creating a new interface with the same properties as the original, plus something new.
+// Interfaces can extend each other's definition
+interface ColoredRectangle extends Rectangle {
+   color: string;
+}
+
+const coloredRectangle: ColoredRectangle = {
+   height: 25,
+   width: 15,
+   color: "Purple"
+};
