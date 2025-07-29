@@ -180,3 +180,47 @@ function printStatusCode(code: string | number) {
 printStatusCode(200);
 printStatusCode("200");
 
+// FUNCTIONS
+// Return types
+// If no parameter type is defined, TypeScript will default to using any
+function getTime(): number {
+   return new Date().getTime();
+}
+console.log(getTime());
+
+// Void Return Type (the functions don't return anything)
+function printHello(): void {
+   console.log("Hello, World!");
+}
+printHello();
+
+// Parameters
+function multiply(a: number, b: number ) {
+   return a * b;
+}
+console.log(multiply(5, 10));
+
+// Optional Parameters using '?' operator
+function add(a: number, b: number, c?: number ) {
+   return a + b + (c || 0);
+}
+console.log(add(5, 10)); // 15
+console.log(add(5, 10, 15)); // 30
+
+// Default Parameters
+function pow(value: number, exponent: number = 10) {
+   return value ** exponent;
+}
+console.log(pow(2)); // 1024
+
+// Named Parameters
+function divide({dividend, divisor}: {dividend: number, divisor: number}) {
+   return dividend / divisor;
+}
+
+// Rest Parameters - the type must be an array as rest params are always arrays
+function sum(a: number, b: number, ...rest: number[]) {
+   return a + b + rest.reduce((p, c) => p + c, 0);
+}
+
+// Type alias 
