@@ -224,3 +224,13 @@ function sum(a: number, b: number, ...rest: number[]) {
 }
 
 // Type alias 
+
+// Type casting: Overriding a type. Casting does not change the type of the variable, it just tells TypeScript to treat it as a different type.
+// Cast with as keyword
+let x3: unknown = "Hello, World!";
+console.log((x3 as string).length); // 13
+
+// Casting with <>
+let x4: unknown = "hello";
+console.log((<string>x4).length); // 5
+
